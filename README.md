@@ -35,6 +35,19 @@ reset {
 # => nil
 ```
 
+## APIs
+
+- `Continuation class`
+
+Represents a delimited continuation that cuts the process from where
+the shift operator is called up to the nearest reset operator. Since continuations
+have infinite extent, once they are created it is possible to call them anytime anywhere,
+and even however many times. When the continuation is cut (making a continuation closure),
+the bottom of the stack of the delimited continuation is dynamically chosen.
+
+- `Kernel.#reset { ... } -> value`
+- `Kernel.#shift {|k| ... } -> value`
+
 ## ToDos
 
 - control/prompt
