@@ -2,7 +2,7 @@
 
 partial continuation support for mruby.
 
-## install
+## Install
 
 ```ruby
 MRuby::Build.new do |conf|
@@ -16,7 +16,7 @@ end
 mruby-partcont does not depends on other libraries or extensions, but
 for the safety it is highly recommended to add at the end of the gem build conf.
 
-## usage
+## Example
 
 ```ruby
 reset {
@@ -34,6 +34,12 @@ reset {
 # 3
 # => nil
 ```
+
+## ToDos
+
+- control/prompt
+- full (undelimited) continuation support
+- documentation
 
 ## auther
 
