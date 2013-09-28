@@ -9,7 +9,7 @@ MRuby::Build.new do |conf|
 
     # ... (snip) ...
 
-    conf.gem :github => 'wasabiz/mruby-partcont''
+    conf.gem :github => 'wasabiz/mruby-partcont'
 end
 ```
 
