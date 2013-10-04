@@ -104,6 +104,8 @@ mrb_continuation_call(mrb_state *mrb, mrb_value self)
   struct mrb_context *c;
   int len;
 
+  mrb_get_args(mrb, "*", &a, &len);
+
   fib = mrb_iv_get(mrb, self, mrb_intern(mrb, "__fiber__"));
 
   /* clone context */
@@ -116,8 +118,6 @@ mrb_continuation_call(mrb_state *mrb, mrb_value self)
   mrb->c = c;
 
   MARK_CONTEXT_MODIFY(c);
-
-  mrb_get_args(mrb, "*", &a, &len);
   return continuation_result(mrb, a, len);
 }
 
